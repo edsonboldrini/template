@@ -38,17 +38,17 @@ A situação do aluno no log poderia indicar, se o aluno está na instituição 
 | RF01 | EU, COMO  **QUEM**, QUERO/GOSTARIA/DEVO/POSSO **O QUE**, PARA QUE/DE/PARA **PORQUE/RESULTADO**. | Must | 2 |
 | RF02 | EU, COMO cliente, POSSO acessar o acerto da locadora PARA QUE consiga ver os filmes disponíveis antes de sair de casa. | Should | 3 |
 
-RF<br>
+RF:<br>
 
-O sistema deve realizar cadastro de aluno;<br>
-O sistema deve realizar cadastro de responsável;<br>
-O sistema deve realizar cadastro de contatos do responsável;<br>
-O sistema deve realizar cadastro curso;<br>
-O sistema deve realizar cadastro de turma;<br>
-O sistema deve disponibilizar para responsável todo histórico de entrada/saída dos alunos;<br>
-O sistema deve enviar notificação com horário de entrada/saída do aluno;<br>
-Gerar relatórios de atraso de alunos;<br>
-Gerar relatórios de entrada e saída de alunos;<br>
+- O sistema deve realizar cadastro de aluno;<br>
+- O sistema deve realizar cadastro de responsável;<br>
+- O sistema deve realizar cadastro de contatos do responsável;<br>
+- O sistema deve realizar cadastro curso;<br>
+- O sistema deve realizar cadastro de turma;<br>
+- O sistema deve disponibilizar para responsável todo histórico de entrada/saída dos alunos;<br>
+- O sistema deve enviar notificação com horário de entrada/saída do aluno;<br>
+- Gerar relatórios de atraso de alunos;<br>
+- Gerar relatórios de entrada e saída de alunos;<br>
 
 
 ###4.2	Requisitos Não Funcionais
@@ -59,11 +59,11 @@ Gerar relatórios de entrada e saída de alunos;<br>
 
 RNF<br>
 
-O sistema deve ler log disponibilizado pelos leitores de RFID;<br>
-O sistema deve ser acessado de forma web para responsáveis do aluno.<br>
-O sistema precisa de um login para manter a segurança das informações.<br>
-O sistema deve ser capaz de exportar relatórios em formatos pdf e xls.<br>
-O sistema deve ser capaz de enviar e-mail/mensagem com horário de entrada/saída do aluno.<br>
+- O sistema deve ler log disponibilizado pelos leitores de RFID;<br>
+- O sistema deve ser acessado de forma web para responsáveis do aluno.<br>
+- O sistema precisa de um login para manter a segurança das informações.<br>
+- O sistema deve ser capaz de exportar relatórios em formatos pdf e xls.<br>
+- O sistema deve ser capaz de enviar e-mail/mensagem com horário de entrada/saída do aluno.<br>
 
 
 ###4.3	Regras de Negócio
@@ -74,9 +74,9 @@ O sistema deve ser capaz de enviar e-mail/mensagem com horário de entrada/saíd
 
 RN<br>
 
-Caso aluno chegar 3 vezes atrasado mais de 15 minutos será punido e o responsável será notificado (punição a definir);<br>
-Qualquer saída do aluno da instituição com período muito grande (2h) deve enviar notificação;<br>
-Sistema deve enviar notificação caso escolhido pelo responsável caso x minutos de atraso;<br>
+- Caso aluno chegar 3 vezes atrasado mais de 15 minutos será punido e o responsável será notificado (punição a definir);<br>
+- Qualquer saída do aluno da instituição com período muito grande (2h) deve enviar notificação;<br>
+- Sistema deve enviar notificação caso escolhido pelo responsável caso x minutos de atraso;<br>
 
 #Desenvolvimento do Sistema
 ##1.    Análise de Sistemas:
