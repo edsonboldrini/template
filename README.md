@@ -8,8 +8,8 @@ Trabalho desenvolvido durante as disciplinas de:
 
 
 **INTEGRANTES DO GRUPO:** 
-- Nome integrante 1
-- Nome integrante 2<br>
+- Edson Simões Boldrini
+- Pedro Henrique Costa<br>
 
         
 #Sumário
@@ -18,13 +18,17 @@ Trabalho desenvolvido durante as disciplinas de:
 #Gerência de Requisitos
 
 ##1	Motivação e Propósito do Sistema 
-escrever os motivos, necessidades e benefícios do projeto.
+Este documento contém a especificação do projeto do banco de dados "Controle de acesso por RFID" que tem como motivação oferecer uma maior segurança aos alunos do IFES Campus Serra.<br>
 
 ##2	Personas
 descrever os personas de tal forma que descreva as necessidades do usuário pelo sistema.
 
 ##3	Minimundo 
-descrição breve sobre o sistema 
+O IFES (Instituto Federal do Espírito Santo) campus Serra está inserindo alunos do ensino médio em suas dependências disponibilizando cursos técnicos integrados ao ensino médio para adolescentes interessados em aprenderem algo a mais do que o ensino médio normal.<br>
+Esses adolescentes são, em boa parte, menores de idade, e/ou ainda moram e/ou tem alguma dependência com seus respectivos pais ou responsáveis. Com isso, deseja-se construir um sistema para controle de entrada e saída dos alunos do ensino médio do ifes campus serra.<br>
+No portão de entrada principal será instalado um leitor de RFID e todo acesso de entrada e saída ficará registado em um log. O controle de acesso de cada aluno seria baseado no horário da sua turma, cada turma possui seus horários de entradas e saídas da parte da manhã e tarde, conforme os horários dos alunos pode não haver registro de logs de entrada ou saída.<br>
+Os alunos têm responsáveis, e, como base de um sistema automático, será disponibilizado aos responsáveis todos os logs de acesso para que, eles possam fazer o acompanhamento do acesso do aluno a instituição.<br>
+A situação do aluno no log poderia indicar, se o aluno está na instituição ou não, se ele tem faltado muitas aulas e até mesmo se o aluno se encontra em educação física ou visita técnica.<br>
 
 ##4	Requisitos de Usuários
 ###4.1	Requisitos Funcionais (Histórias de Usuário)
@@ -34,11 +38,33 @@ descrição breve sobre o sistema
 | RF01 | EU, COMO  **QUEM**, QUERO/GOSTARIA/DEVO/POSSO **O QUE**, PARA QUE/DE/PARA **PORQUE/RESULTADO**. | Must | 2 |
 | RF02 | EU, COMO cliente, POSSO acessar o acerto da locadora PARA QUE consiga ver os filmes disponíveis antes de sair de casa. | Should | 3 |
 
+RF<br>
+
+O sistema deve realizar cadastro de aluno;<br>
+O sistema deve realizar cadastro de responsável;<br>
+O sistema deve realizar cadastro de contatos do responsável;<br>
+O sistema deve realizar cadastro curso;<br>
+O sistema deve realizar cadastro de turma;<br>
+O sistema deve disponibilizar para responsável todo histórico de entrada/saída dos alunos;<br>
+O sistema deve enviar notificação com horário de entrada/saída do aluno;<br>
+Gerar relatórios de atraso de alunos;<br>
+Gerar relatórios de entrada e saída de alunos;<br>
+
+
 ###4.2	Requisitos Não Funcionais
 | ID | Descrição | Prioridade | Categoria | Escopo |
 | --- | --- | --- | --- | --- |
 | RNF01 | A entrada de dados de efetuar locação pelo atendente deverá ser realizada em no máximo 30 segundos | Must | 2 | Facilidade de Operação | Funcionalidade |
 | RNF02 | O tempo de resposta de efetuar locação dever ser de no máximo 2 segundos a partir da entrada correta de dados | Should | 3 | Eficincia de Tempo | Funcionalidade |
+
+RNF<br>
+
+O sistema deve ler log disponibilizado pelos leitores de RFID;<br>
+O sistema deve ser acessado de forma web para responsáveis do aluno.<br>
+O sistema precisa de um login para manter a segurança das informações.<br>
+O sistema deve ser capaz de exportar relatórios em formatos pdf e xls.<br>
+O sistema deve ser capaz de enviar e-mail/mensagem com horário de entrada/saída do aluno.<br>
+
 
 ###4.3	Regras de Negócio
 | ID | Descrição | Prioridade | 
@@ -46,6 +72,11 @@ descrição breve sobre o sistema
 | RN01 | Uma reserva expira quando passadas mais do que 24h de sua comunicação para o cliente. | Must |
 | RN02 | Clientes em atraso não podem efetuar nem locações nem reservas. | Should |
 
+RN<br>
+
+Caso aluno chegar 3 vezes atrasado mais de 15 minutos será punido e o responsável será notificado (punição a definir);<br>
+Qualquer saída do aluno da instituição com período muito grande (2h) deve enviar notificação;<br>
+Sistema deve enviar notificação caso escolhido pelo responsável caso x minutos de atraso;<br>
 
 #Desenvolvimento do Sistema
 ##1.    Análise de Sistemas:
