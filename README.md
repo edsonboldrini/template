@@ -21,7 +21,7 @@ Trabalho desenvolvido durante as disciplinas de:
 Este documento contém a especificação do projeto do banco de dados "Controle de acesso por RFID" que tem como motivação oferecer uma maior segurança aos alunos do IFES Campus Serra.<br>
 
 ##2	Personas
-descrever os personas de tal forma que descreva as necessidades do usuário pelo sistema.
+O diretor de ensino quer ter um controle maior sobre os alunos do ensino médio que estão no campus e assim, poder avisar aos seus respectivos responsáveis, como estes estão frequentando o Campus.<br>
 
 ##3	Minimundo 
 O IFES (Instituto Federal do Espírito Santo) campus Serra está inserindo alunos do ensino médio em suas dependências disponibilizando cursos técnicos integrados ao ensino médio para adolescentes interessados em aprenderem algo a mais do que o ensino médio normal.<br>
