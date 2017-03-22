@@ -17,21 +17,21 @@ Trabalho desenvolvido durante as disciplinas de:
 
 #Gerência de Requisitos
 
-##1	Motivação e Propósito do Sistema 
+## 1	Motivação e Propósito do Sistema 
 Este documento contém a especificação do projeto do banco de dados "Controle de acesso por RFID" que tem como motivação oferecer uma maior segurança aos alunos do IFES Campus Serra.<br>
 
-##2	Personas
+## 2	Personas
 O diretor de ensino quer ter um controle maior sobre os alunos do ensino médio que estão no campus e assim, poder avisar aos seus respectivos responsáveis, como estes estão frequentando o Campus.<br>
 
-##3	Minimundo 
+## 3	Minimundo 
 O IFES (Instituto Federal do Espírito Santo) campus Serra está inserindo alunos do ensino médio em suas dependências disponibilizando cursos técnicos integrados ao ensino médio para adolescentes interessados em aprenderem algo a mais do que o ensino médio normal.<br>
 Esses adolescentes são, em boa parte, menores de idade, e/ou ainda moram e/ou tem alguma dependência com seus respectivos pais ou responsáveis. Com isso, deseja-se construir um sistema para controle de entrada e saída dos alunos do ensino médio do ifes campus serra.<br>
 No portão de entrada principal será instalado um leitor de RFID e todo acesso de entrada e saída ficará registado em um log. O controle de acesso de cada aluno seria baseado no horário da sua turma, cada turma possui seus horários de entradas e saídas da parte da manhã e tarde, conforme os horários dos alunos pode não haver registro de logs de entrada ou saída.<br>
 Os alunos têm responsáveis, e, como base de um sistema automático, será disponibilizado aos responsáveis todos os logs de acesso para que, eles possam fazer o acompanhamento do acesso do aluno a instituição.<br>
 A situação do aluno no log poderia indicar, se o aluno está na instituição ou não, se ele tem faltado muitas aulas e até mesmo se o aluno se encontra em educação física ou visita técnica.<br>
 
-##4	Requisitos de Usuários
-###4.1	Requisitos Funcionais (Histórias de Usuário)
+## 4	Requisitos de Usuários
+### 4.1	Requisitos Funcionais (Histórias de Usuário)
 
 | ID | Descrição | Prioridade | Pontos |
 | --- | --- | --- | --- |
