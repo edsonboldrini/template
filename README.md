@@ -51,7 +51,7 @@ RF:<br>
 - Gerar relatórios de entrada e saída de alunos;<br>
 
 
-###4.2	Requisitos Não Funcionais
+### 4.2	Requisitos Não Funcionais
 | ID | Descrição | Prioridade | Categoria | Escopo |
 | --- | --- | --- | --- | --- |
 | RNF01 | A entrada de dados de efetuar locação pelo atendente deverá ser realizada em no máximo 30 segundos | Must | 2 | Facilidade de Operação | Funcionalidade |
@@ -66,7 +66,7 @@ RNF<br>
 - O sistema deve ser capaz de enviar e-mail/mensagem com horário de entrada/saída do aluno.<br>
 
 
-###4.3	Regras de Negócio
+### 4.3	Regras de Negócio
 | ID | Descrição | Prioridade | 
 | --- | --- | --- |
 | RN01 | Uma reserva expira quando passadas mais do que 24h de sua comunicação para o cliente. | Must |
