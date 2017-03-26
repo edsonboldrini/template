@@ -51,15 +51,11 @@ RF:<br>
 | RF01 | Eu como Pai, quero que o sistema disponibilize para mim todo histórico de entrada/saída dos alunos. | Must | 1 |
 | RF01 | Eu como Pai, quero que o sistema envie notificação com horário de entrada/saída do aluno. | Must | 1 |
 
-RF:<br>
-
 ### 4.2	Requisitos Não Funcionais
 | ID | Descrição | Prioridade | Categoria | Escopo |
 | --- | --- | --- | --- | --- |
 | RNF01 | A entrada de dados de efetuar locação pelo atendente deverá ser realizada em no máximo 30 segundos | Must | 2 | Facilidade de Operação | Funcionalidade |
 | RNF02 | O tempo de resposta de efetuar locação dever ser de no máximo 2 segundos a partir da entrada correta de dados | Should | 3 | Eficincia de Tempo | Funcionalidade |
-
-RNF<br>
 
 - O sistema deve ler log disponibilizado pelos leitores de RFID;<br>
 - O sistema deve ser acessado de forma web para responsáveis do aluno.<br>
@@ -73,8 +69,6 @@ RNF<br>
 | --- | --- | --- |
 | RN01 | Uma reserva expira quando passadas mais do que 24h de sua comunicação para o cliente. | Must |
 | RN02 | Clientes em atraso não podem efetuar nem locações nem reservas. | Should |
-
-RN<br>
 
 - Caso aluno chegar 3 vezes atrasado mais de 15 minutos será punido e o responsável será notificado (punição a definir);<br>
 - Qualquer saída do aluno da instituição com período muito grande (2h) deve enviar notificação;<br>
