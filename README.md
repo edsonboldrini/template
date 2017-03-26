@@ -57,12 +57,14 @@ RF:<br>
 | RNF01 | A entrada de dados de efetuar locação pelo atendente deverá ser realizada em no máximo 30 segundos | Must | 2 | Facilidade de Operação | Funcionalidade |
 | RNF02 | O tempo de resposta de efetuar locação dever ser de no máximo 2 segundos a partir da entrada correta de dados | Should | 3 | Eficincia de Tempo | Funcionalidade |
 
-- O sistema deve ler log disponibilizado pelos leitores de RFID;<br>
-- O sistema deve ser acessado de forma web para responsáveis do aluno.<br>
-- O sistema precisa de um login para manter a segurança das informações.<br>
-- O sistema deve ser capaz de exportar relatórios em formatos pdf e xls.<br>
-- O sistema deve ser capaz de enviar e-mail/mensagem com horário de entrada/saída do aluno.<br>
 
+| ID | Descrição | Prioridade | Categoria | Escopo |
+| --- | --- | --- | --- | --- |
+| RNF01 | O sistema deve ler log disponibilizado pelos leitores de RFID. | Must | 2 | Facilidade de Operação | Funcionalidade |
+| RNF02 | O sistema deve ser acessado de forma web para responsáveis do aluno. | Should | 3 | Eficincia de Tempo | Funcionalidade |
+| RNF02 | O sistema precisa de um login para manter a segurança das informações. | Should | 3 | Eficincia de Tempo | Funcionalidade |
+| RNF02 | O sistema deve ser capaz de exportar relatórios em formatos pdf e xls. | Should | 3 | Eficincia de Tempo | Funcionalidade |
+| RNF02 | O sistema deve ser capaz de enviar e-mail/mensagem com horário de entrada/saída do aluno. | Should | 3 | Eficincia de Tempo | Funcionalidade |
 
 ### 4.3	Regras de Negócio
 | ID | Descrição | Prioridade | 
