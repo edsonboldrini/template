@@ -79,6 +79,8 @@ A situação do aluno no log poderia indicar, se o aluno está na instituição 
 ## 1.    Análise de Sistemas:
 ### 1.1  Subsistemas
 inserir diagrama dos subsistemas UML
+https://github.com/edsonsb96/template/blob/master/Trabalho_PS.asta
+
 ### 1.2  Modelagem de Casos de uso 
 inserir diagramas dos Casos de Uso (UML) e descrever brevemente.
 
