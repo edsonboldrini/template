@@ -99,7 +99,7 @@ inserir principais diagramas comportamentais da análise (principalmente, estado
 ## 2.    Projeto de Sistemas:
 ### 2.1  Projeto Arquitetural 
 #### 2.1.1   Plataforma de Implementação e Tecnologias
-descrever tecnologias usadas no sistema, justificando cada uma delas com base no contexto
+O software foram divididos em alguns subsistemas ‘controle de aluno’, ‘log de acesso’ e  ‘controle acesso responsável’  será desenvolvido utilizando linguagem de programação PHP juntamente com framework laravel com o banco de dados (PostgreSQL) para parte de back-end, o front-end alguns frameworks como Bootstrap, jquery e alguns plugins derivados do jquery, porém no subsistema ‘controle acesso responsável’ a parte mobile será desenvolvida usando framework ionic. A escolha do sistema web no subsistema ‘controle de aluno’ foi requisito descrito pelo solicitante, já o subsistema ‘controle acesso responsável’ como responsáveis precisam de ter acesso a qualquer momento será implementado duas versões uma web e outra mobile. 
 
 #### 2.1.2   Atributos de Qualidade e Táticas
  CATEGORIAS | RNF'S | TÁTICAS | 
