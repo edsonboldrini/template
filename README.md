@@ -121,7 +121,8 @@ apresentar diagrama de classes do domínio
 apresentar diagramas de sequência e mapeamento dos casos de uso para classes
 #### 2.2.2.  Projeto da Interface com Usuário
 ##### Projeto da Visão
-A apresentação completa pode ser encontrada [aqui](https://github.com/edsonsb96/template/blob/master/Modelo_Tela.pdf).
+A apresentação controle de acesso completa pode ser encontrada [aqui](https://github.com/edsonsb96/template/blob/master/Modelo_Tela.pdf).
+A apresentação acesso responsáveis completa pode ser encontrada [aqui](https://github.com/edsonsb96/template/blob/master/Cadastro%20RFID.pdf).
 
 #####Projeto da Interação Humana
 apresentar diagrama de classes da IU com controladores e diagrama de sequências. Apresentar diagrama com estados de navegação.
