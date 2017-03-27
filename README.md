@@ -121,14 +121,8 @@ apresentar diagrama de classes do domínio
 apresentar diagramas de sequência e mapeamento dos casos de uso para classes
 #### 2.2.2.  Projeto da Interface com Usuário
 ##### Projeto da Visão
-apresentar protótipos de telas e diagramas de classes UML (caso realizado)
-OBS: Essa visão não tem nada a ver com Views de Banco de Dados
+A apresentação completa pode ser encontrada [aqui](https://github.com/edsonsb96/template/blob/master/Modelo_Tela.pdf).
 
-__OBS DE BD2__: neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
-
-Sugestão: https://balsamiq.com/products/mockups/<br>
-
-![Alt text](https://github.com/discipbd2/topicos-trabalho/blob/master/balsamiq.png?raw=true "Title")
 #####Projeto da Interação Humana
 apresentar diagrama de classes da IU com controladores e diagrama de sequências. Apresentar diagrama com estados de navegação.
 #### 2.2.3.  Projeto da Persistência de Dados
