@@ -108,7 +108,9 @@ O software foram divididos em alguns subsistemas ‘controle de aluno’, ‘log
 
 
 #### 2.1.3   Arquitetura de Software
-apresentar diagrama UML da arquitetura do sistema. justificar as decisões tomadas.
+![Alt text](https://github.com/edsonsb96/template/blob/master/Arquitetura_Sistema.png?raw=true "Arquitetura de Software")
+
+O software foi dividido em 3 subsistemas  ‘controle de aluno’, ‘log de acesso’ e  ‘controle acesso responsável’. A arquitetura que será usada vai ser camadas juntamente com partições visto que para sistema em si ficará mais organizado e fácil para futuras alterações. Será adotado o padrão MVC para subsistema ‘controle de aluno’, ‘log de acesso’ e Camada de Serviço para ‘controle acesso responsável’ visto que pode ser tanto web quanto mobile. Toda gerência de dados será realizada pelo padrão DAO. Praticamente todo sistema terá uma camada de controle interface com usuário, lógica de negócio e gerência de dados.
 
 ### 2.2. Projeto Detalhado
 OBS: repetir as seções abaixo para cada subsistema
