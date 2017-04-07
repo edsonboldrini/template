@@ -45,9 +45,9 @@ A situação do aluno no log poderia indicar, se o aluno está na instituição 
 | RF02 | Eu como Diretor, quero que o sistema realize cadastro de responsável. | Must | 1 |
 | RF03 | Eu como Diretor, quero que o sistema realize cadastro curso. | Must | 1 |
 | RF04 | Eu como Diretor, quero que o sistema realize cadastro de turma. | Must | 1 |
-| RF05 | Eu como Diretor, quero que o sistema gere relatórios de atraso de alunos. | Must | 2 |
-| RF06 | Eu como Diretor, quero que o sistema gere relatórios de entrada e saída de alunos. | Must | 2 |
-| RF07 | Eu como Pai, quero que o sistema disponibilize para mim todo histórico de entrada/saída dos alunos. | Must | 1 |
+| RF05 | Eu como Diretor, quero que o sistema gere relatórios de atraso de alunos. | Should | 2 |
+| RF06 | Eu como Diretor, quero que o sistema gere relatórios de entrada e saída de alunos. | Should | 2 |
+| RF07 | Eu como Pai, quero que o sistema disponibilize para mim todo histórico de entrada/saída dos alunos. | Should | 2 |
 | RF08 | Eu como Pai, quero que o sistema envie notificação com horário de entrada/saída do aluno. | Must | 1 |
 
 ### 4.2	Requisitos Não Funcionais
