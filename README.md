@@ -12,10 +12,10 @@ Trabalho desenvolvido durante as disciplinas de:
 - Pedro Henrique Costa<br>
 
         
-#Sumário
+# Sumário
 
 
-#Gerência de Requisitos
+# Gerência de Requisitos
 
 ## 1	Motivação e Propósito do Sistema 
 Este documento contém a especificação do projeto do banco de dados "Controle de acesso por RFID" que tem como motivação oferecer uma maior segurança aos alunos do IFES Campus Serra.<br>
