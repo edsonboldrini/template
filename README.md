@@ -129,11 +129,11 @@ OBS: repetir as seções abaixo para cada subsistema
 
 ###### Justificativas
 
-Foi criado navegação de dupla entre Aluno e Responsável para que nas buscas, quanto partir do alunos encontrar os responsáveis e vice e versa. 
-Foi criado a classe “TipoContato” por motivos que podem surgir no futuro novos tipos de contatos porém terá como início os valores (Telefone, E-mail, Celular).
-Foi criado a classe “Bairro” e “Cidade” para reaproveitamento de informações que forem cadastradas nos próximos cadastros, visto que comum pessoas morarem no mesmo bairros e cidades.
-Foi criado o enum “DiaSemana” visto que dias das semanas são sempre (Segunda, Terça, Quarta, Quinta, Sexta, Sábado e Domingo), a possibilidade de mudança e praticamente mínima de acontecer.
-Todas as outras navegabilidades são justificadas por as classes serem as mais fortes nos relacionamentos.
+- Foi criado navegação de dupla entre Aluno e Responsável para que nas buscas, quanto partir do alunos encontrar os responsáveis e vice e versa. 
+- Foi criado a classe “TipoContato” por motivos que podem surgir no futuro novos tipos de contatos porém terá como início os valores (Telefone, E-mail, Celular).
+- Foi criado a classe “Bairro” e “Cidade” para reaproveitamento de informações que forem cadastradas nos próximos cadastros, visto que comum pessoas morarem no mesmo bairros e cidades.
+- Foi criado o enum “DiaSemana” visto que dias das semanas são sempre (Segunda, Terça, Quarta, Quinta, Sexta, Sábado e Domingo), a possibilidade de mudança e praticamente mínima de acontecer.
+- Todas as outras navegabilidades são justificadas por as classes serem as mais fortes nos relacionamentos.
 
 ##### Projeto da Aplicação
 apresentar diagramas de sequência e mapeamento dos casos de uso para classes
