@@ -121,7 +121,7 @@ O software foi dividido em 3 subsistemas  ‘controle de aluno’, ‘log de ace
 OBS: repetir as seções abaixo para cada subsistema
 #### 2.2.1.   Projeto da Lógica de Negócio
 ##### Projeto do Domínio
-###### Diagrama de Classe Analise
+###### Diagrama de Classe Análise
 ![Alt text](https://github.com/edsonsb96/template/blob/master/DiagramaClasseAnalise.png?raw=true "Diagrama de Classe Analise")
 
 ###### Diagrama de Classe Projeto
