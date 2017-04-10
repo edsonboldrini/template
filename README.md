@@ -122,8 +122,10 @@ OBS: repetir as seções abaixo para cada subsistema
 #### 2.2.1.   Projeto da Lógica de Negócio
 ##### Projeto do Domínio
 apresentar diagrama de classes do domínio
+[!alt text](https://github.com/edsonsb96/template/blob/master/17858564_1180664955392499_256072380_o.png)
 ##### Projeto da Aplicação
 apresentar diagramas de sequência e mapeamento dos casos de uso para classes
+[!alt text](https://github.com/edsonsb96/template/blob/master/17858809_1180664952059166_641211152_o.png)
 #### 2.2.2.  Projeto da Interface com Usuário
 ##### Projeto da Visão
 A apresentação controle de acesso completa pode ser encontrada [aqui](https://github.com/edsonsb96/template/blob/master/Modelo_Tela.pdf). <br>
