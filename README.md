@@ -64,12 +64,12 @@ A situação do aluno no log poderia indicar, se o aluno está na instituição 
 
 | ID | Descrição | Prioridade | Categoria | Escopo |
 | --- | --- | --- | --- | --- |
-| RNF01 | O sistema deve ler log disponibilizado pelos leitores de RFID. | Must | 2 | Facilidade de Operação | Funcionalidade |
-| RNF02 | O sistema deve ser acessado de forma web para responsáveis do aluno. | Must | 2 | Eficincia de Tempo | Funcionalidade |
-| RNF03 | O sistema precisa de um login para manter a segurança das informações. | Must | 2 | Eficincia de Tempo | Funcionalidade |
-| RNF04 | O sistema deve ser capaz de exportar relatórios em formatos pdf e xls. | Should | 2 | Eficincia de Tempo | Funcionalidade |
-| RNF05 | O sistema deve ser capaz de enviar e-mail/mensagem com horário de entrada/saída do aluno. | Should | 1 | Eficincia de Tempo | Funcionalidade |
-| RNF06 | Sistema deve enviar notificação caso escolhido pelo responsável caso x minutos de atraso. | Could | 2 | Eficincia de Tempo | Funcionalidade |
+| RNF01 | O sistema deve ler log disponibilizado pelos leitores de RFID. | Must | 2 | Facilidade de Operação |
+| RNF02 | O sistema deve ser acessado de forma web para responsáveis do aluno. | Must | 2 | Eficiência de Tempo |
+| RNF03 | O sistema precisa de um login para manter a segurança das informações. | Must | 2 | Eficiência de Tempo |
+| RNF04 | O sistema deve ser capaz de exportar relatórios em formatos pdf e xls. | Should | 2 | Eficiência de Tempo |
+| RNF05 | O sistema deve ser capaz de enviar e-mail/mensagem com horário de entrada/saída do aluno. | Should | 1 | Eficiência de Tempo |
+| RNF06 | Sistema deve enviar notificação caso escolhido pelo responsável caso x minutos de atraso. | Could | 2 | Eficiência de Tempo |
 ### 4.3	Regras de Negócio
 <!--
 | ID | Descrição | Prioridade | 
