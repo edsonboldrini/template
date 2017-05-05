@@ -69,7 +69,7 @@ A situação do aluno no log poderia indicar, se o aluno está na instituição 
 | RNF03 | O sistema precisa de um login para manter a segurança das informações. | Must | 2 | Eficincia de Tempo | Funcionalidade |
 | RNF04 | O sistema deve ser capaz de exportar relatórios em formatos pdf e xls. | Should | 2 | Eficincia de Tempo | Funcionalidade |
 | RNF05 | O sistema deve ser capaz de enviar e-mail/mensagem com horário de entrada/saída do aluno. | Should | 1 | Eficincia de Tempo | Funcionalidade |
-
+| RNF06 | Sistema deve enviar notificação caso escolhido pelo responsável caso x minutos de atraso. | Could | 2 | Eficincia de Tempo | Funcionalidade |
 ### 4.3	Regras de Negócio
 <!--
 | ID | Descrição | Prioridade | 
@@ -82,7 +82,6 @@ A situação do aluno no log poderia indicar, se o aluno está na instituição 
 | --- | --- | --- |
 | RN01 | Caso aluno chegar 3 vezes atrasado mais de 15 minutos será punido e o responsável será notificado (punição a definir). | Should |
 | RN02 | Qualquer saída do aluno da instituição com período muito grande (2h) deve enviar notificação. | Could |
-| RN02 | Sistema deve enviar notificação caso escolhido pelo responsável caso x minutos de atraso. | Could |
 
 # Desenvolvimento do Sistema
 ## 1.    Análise de Sistemas:
