@@ -47,8 +47,11 @@ A situação do aluno no log poderia indicar, se o aluno está na instituição 
 | RF04 | Eu como Diretor, quero que o sistema realize cadastro de turma. | Must | 1 |
 | RF05 | Eu como Diretor, quero que o sistema gere relatórios de atraso de alunos. | Should | 2 |
 | RF06 | Eu como Diretor, quero que o sistema gere relatórios de entrada e saída de alunos. | Should | 2 |
-| RF07 | Eu como Pai, quero que o sistema disponibilize para mim todo histórico de entrada/saída dos alunos. | Should | 2 |
-| RF08 | Eu como Pai, quero que o sistema envie notificação com horário de entrada/saída do aluno. | Must | 1 |
+| RF07 | Eu como Responsável, quero que o sistema disponibilize para mim todo histórico de entrada/saída dos alunos. | Should | 2 |
+| RF08 | Eu como Responsável, quero que o sistema envie notificação com horário de entrada/saída do aluno. | Must | 1 |
+| RF09 | Eu como Aluno, quero que o sistema me informe quantos dias eu cheguei atrasado. | Could | 1 |
+| RF10 | Eu como Aluno, quero que o sistema me informe cada vez que meu responsável for notificado. | Could | 1 |
+| RF11 | Eu como Aluno, quero que o sistema me notifique para não chegar mais atrasado(estourar limite). | Should | 1 |
 
 ### 4.2	Requisitos Não Funcionais
 <!--
