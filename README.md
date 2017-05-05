@@ -24,7 +24,7 @@ Este documento contém a especificação do projeto do banco de dados "Controle 
 O diretor de ensino quer ter um controle maior sobre os alunos do ensino médio que estão no campus e assim, poder avisar aos seus respectivos responsáveis, como estes estão frequentando o Campus.<br>
 
 ## 3	Minimundo 
-O IFES (Instituto Federal do Espírito Santo) campus Serra está inserindo alunos do ensino médio em suas dependências disponibilizando cursos técnicos integrados ao ensino médio para adolescentes interessados em aprenderem algo a mais do que o ensino médio normal.
+<p>O IFES (Instituto Federal do Espírito Santo) campus Serra está inserindo alunos do ensino médio em suas dependências disponibilizando cursos técnicos integrados ao ensino médio para adolescentes interessados em aprenderem algo a mais do que o ensino médio normal.
 <br>
 Esses adolescentes são, em boa parte, menores de idade, e/ou ainda moram e/ou tem alguma dependência com seus respectivos pais ou responsáveis. Com isso, deseja-se construir um sistema para controle de entrada e saída dos alunos do ensino médio do ifes campus serra.
 <br>
