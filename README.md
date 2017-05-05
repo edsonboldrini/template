@@ -52,6 +52,7 @@ A situação do aluno no log poderia indicar, se o aluno está na instituição 
 | RF09 | Eu como Aluno, quero que o sistema me informe quantos dias eu cheguei atrasado. | Could | 1 |
 | RF10 | Eu como Aluno, quero que o sistema me informe cada vez que meu responsável for notificado. | Could | 1 |
 | RF11 | Eu como Aluno, quero que o sistema me notifique para não chegar mais atrasado(estourar limite). | Should | 1 |
+| RF12 | Eu como Administrador, quero que o sistema possa ser usado em qualquer escola. | Would | 1 |
 
 ### 4.2	Requisitos Não Funcionais
 <!--
