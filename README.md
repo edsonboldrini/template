@@ -30,7 +30,7 @@ Esses adolescentes são, em boa parte, menores de idade, e/ou ainda moram e/ou t
 <br>
 No portão de entrada principal será instalado um leitor de RFID e todo acesso de entrada e saída ficará registado em um log. O controle de acesso de cada aluno será baseado no horário da sua turma, cada turma possui seus horários de entradas e saídas da parte da manhã e tarde, conforme os horários dos alunos pode não haver registro de logs de entrada ou saída.
 <br>
-Cada curso oferecido pode haver várias turmas conforme o passar dos anos. Para o curso deseja armazenar (nome e código), já para turmas deseja armazenar (nome código) e de qual curso ela pertence. Os registro dos horários de entrada e saída de cada turma pode ser diferente conforme o dia da semana e no mesmo dia pode haver diferentes horários de entradas e saída.
+Cada curso oferecido pode haver várias turmas conforme o passar dos anos. Para o curso deseja armazenar (nome e código), já para turmas deseja armazenar (nome e código) e de qual curso ela pertence. Os registro dos horários de entrada e saída de cada turma pode ser diferente conforme o dia da semana e no mesmo dia pode haver diferentes horários de entradas e saída.
 <br>
 Dos alunos deseja armazenar (nome, codigo, endereço, matrícula), quais turmas eles está matriculado e já foi matriculado. Os mesmo  podem ter vários responsáveis que precisa armazenar (nome, endereço, vários contatos e se deseja receber notificação caso houver atraso), e, como base de um sistema automático, será disponibilizado aos responsáveis todos os logs de acesso (data, hora) para que, eles possam fazer o acompanhamento do acesso do aluno a instituição.
 <br>
