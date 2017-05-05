@@ -23,7 +23,8 @@ Este documento contém a especificação do projeto do banco de dados "Controle 
 ## 2	Personas
 O diretor de ensino quer ter um controle maior sobre os alunos do ensino médio que estão no campus e assim, poder avisar aos seus respectivos responsáveis, como estes estão frequentando o Campus.<br>
 
-## 3	Minimundo 
+## 3	Minimundo
+<p align="justify">
 O IFES (Instituto Federal do Espírito Santo) campus Serra está inserindo alunos do ensino médio em suas dependências disponibilizando cursos técnicos integrados ao ensino médio para adolescentes interessados em aprenderem algo a mais do que o ensino médio normal.
 <br>
 Esses adolescentes são, em boa parte, menores de idade, e/ou ainda moram e/ou tem alguma dependência com seus respectivos pais ou responsáveis. Com isso, deseja-se construir um sistema para controle de entrada e saída dos alunos do ensino médio do ifes campus serra.
@@ -37,7 +38,8 @@ Dos alunos deseja armazenar (nome, codigo, endereço, matrícula), quais turmas 
 A situação do aluno no log poderia indicar, se o aluno está na instituição ou não, se ele tem faltado muitas aulas e até mesmo se o aluno se encontra em educação física ou visita técnica.
 <br>
 Pode haver alguns eventos atípicos como visita técnica, aulas extras, palestras que também deve ser registrado de log dos alunos. Dos eventos deseja armazenar (nome, tipo do evento, data, horários conforme a turma). 
-<br>
+<br></p>
+
 
 ## 4	Requisitos de Usuários
 ### 4.1	Requisitos Funcionais (Histórias de Usuário)
