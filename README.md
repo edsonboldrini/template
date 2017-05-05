@@ -24,11 +24,20 @@ Este documento contém a especificação do projeto do banco de dados "Controle 
 O diretor de ensino quer ter um controle maior sobre os alunos do ensino médio que estão no campus e assim, poder avisar aos seus respectivos responsáveis, como estes estão frequentando o Campus.<br>
 
 ## 3	Minimundo 
-O IFES (Instituto Federal do Espírito Santo) campus Serra está inserindo alunos do ensino médio em suas dependências disponibilizando cursos técnicos integrados ao ensino médio para adolescentes interessados em aprenderem algo a mais do que o ensino médio normal.<br>
-Esses adolescentes são, em boa parte, menores de idade, e/ou ainda moram e/ou tem alguma dependência com seus respectivos pais ou responsáveis. Com isso, deseja-se construir um sistema para controle de entrada e saída dos alunos do ensino médio do ifes campus serra.<br>
-No portão de entrada principal será instalado um leitor de RFID e todo acesso de entrada e saída ficará registado em um log. O controle de acesso de cada aluno seria baseado no horário da sua turma, cada turma possui seus horários de entradas e saídas da parte da manhã e tarde, conforme os horários dos alunos pode não haver registro de logs de entrada ou saída.<br>
-Os alunos têm responsáveis, e, como base de um sistema automático, será disponibilizado aos responsáveis todos os logs de acesso para que, eles possam fazer o acompanhamento do acesso do aluno a instituição.<br>
-A situação do aluno no log poderia indicar, se o aluno está na instituição ou não, se ele tem faltado muitas aulas e até mesmo se o aluno se encontra em educação física ou visita técnica.<br>
+O IFES (Instituto Federal do Espírito Santo) campus Serra está inserindo alunos do ensino médio em suas dependências disponibilizando cursos técnicos integrados ao ensino médio para adolescentes interessados em aprenderem algo a mais do que o ensino médio normal.
+<br>
+Esses adolescentes são, em boa parte, menores de idade, e/ou ainda moram e/ou tem alguma dependência com seus respectivos pais ou responsáveis. Com isso, deseja-se construir um sistema para controle de entrada e saída dos alunos do ensino médio do ifes campus serra.
+<br>
+No portão de entrada principal será instalado um leitor de RFID e todo acesso de entrada e saída ficará registado em um log. O controle de acesso de cada aluno será baseado no horário da sua turma, cada turma possui seus horários de entradas e saídas da parte da manhã e tarde, conforme os horários dos alunos pode não haver registro de logs de entrada ou saída.
+<br>
+Cada curso oferecido pode haver várias turmas conforme o passar dos anos. Para o curso deseja armazenar (nome e código), já para turmas deseja armazenar (nome código) e de qual curso ela pertence. Os registro dos horários de entrada e saída de cada turma pode ser diferente conforme o dia da semana e no mesmo dia pode haver diferentes horários de entradas e saída.
+<br>
+Dos alunos deseja armazenar (nome, codigo, endereço, matrícula), quais turmas eles está matriculado e já foi matriculado. Os mesmo  podem ter vários responsáveis que precisa armazenar (nome, endereço, vários contatos e se deseja receber notificação caso houver atraso), e, como base de um sistema automático, será disponibilizado aos responsáveis todos os logs de acesso (data, hora) para que, eles possam fazer o acompanhamento do acesso do aluno a instituição.
+<br>
+A situação do aluno no log poderia indicar, se o aluno está na instituição ou não, se ele tem faltado muitas aulas e até mesmo se o aluno se encontra em educação física ou visita técnica.
+<br>
+Pode haver alguns eventos atípicos como visita técnica, aulas extras, palestras que também deve ser registrado de log dos alunos. Dos eventos deseja armazenar (nome, tipo do evento, data, horários conforme a turma). 
+<br>
 
 ## 4	Requisitos de Usuários
 ### 4.1	Requisitos Funcionais (Histórias de Usuário)
