@@ -46,15 +46,16 @@ A situação do aluno no log poderia indicar, se o aluno está na instituição 
 | RF03 | Eu como Diretor, quero que o sistema realize cadastro curso. | Must | 1 |
 | RF04 | Eu como Diretor, quero que o sistema realize cadastro de turma. | Must | 1 |
 | RF05 | Eu como Diretor, quero que o sistema realize matrícula do aluno na turma. | Must | 1 |
-| RF06 | Eu como Diretor, quero que o sistema gere relatórios de atraso de alunos. | Should | 2 |
-| RF07 | Eu como Diretor, quero que o sistema gere relatórios de entrada e saída de alunos. | Should | 2 |
-| RF08 | Eu como Responsável, quero que o sistema disponibilize para mim todo histórico de entrada/saída dos alunos. | Should | 2 |
-| RF09 | Eu como Responsável, quero que o sistema envie notificação com horário de entrada/saída do aluno. | Must | 1 |
-| RF10 | Eu como Aluno, quero que o sistema me informe quantos dias eu cheguei atrasado. | Could | 1 |
-| RF11 | Eu como Aluno, quero que o sistema me informe cada vez que meu responsável for notificado. | Could | 1 |
-| RF12 | Eu como Aluno, quero que o sistema me notifique para não chegar mais atrasado(estourar limite). | Should | 1 |
-| RF13 | Eu como Aluno, quero que o sistema me envie um lembrete para não me atrasar mais em dias que eu sempre me atraso(recorrência). | Would | 1 |
-| RF14 | Eu como Administrador, quero que o sistema possa ser usado em qualquer escola. | Would | 1 |
+| RF06 | Eu como Diretor, quero que o sistema realize cadastro de eventos(palestras,aulas extras, visitas técnicas etc) visando horários atípicos de entrada/saída | Would | 2 |
+| RF07 | Eu como Diretor, quero que o sistema gere relatórios de atraso de alunos. | Should | 2 |
+| RF08 | Eu como Diretor, quero que o sistema gere relatórios de entrada e saída de alunos. | Should | 2 |
+| RF09 | Eu como Responsável, quero que o sistema disponibilize para mim todo histórico de entrada/saída dos alunos. | Should | 2 |
+| RF10 | Eu como Responsável, quero que o sistema envie notificação com horário de entrada/saída do aluno. | Must | 1 |
+| RF11 | Eu como Aluno, quero que o sistema me informe quantos dias eu cheguei atrasado. | Could | 1 |
+| RF12 | Eu como Aluno, quero que o sistema me informe cada vez que meu responsável for notificado. | Could | 1 |
+| RF13 | Eu como Aluno, quero que o sistema me notifique para não chegar mais atrasado(estourar limite). | Should | 1 |
+| RF14 | Eu como Aluno, quero que o sistema me envie um lembrete para não me atrasar mais em dias que eu sempre me atraso(recorrência). | Would | 1 |
+| RF15 | Eu como Administrador, quero que o sistema possa ser usado em qualquer escola. | Would | 1 |
 
 ### 4.2	Requisitos Não Funcionais
 <!--
