@@ -81,9 +81,9 @@ Pode haver alguns eventos atípicos como visita técnica, aulas extras, palestra
 | RNF01 | O sistema deve ler log disponibilizado pelos leitores de RFID. | Must | 2 | Usabilidade |
 | RNF02 | O sistema deve ser acessado de forma web para responsáveis do aluno. | Must | 2 | Portabilidade |
 | RNF03 | O sistema precisa de um login para manter a segurança das informações. | Must | 2 | Segurança |
-| RNF04 | O sistema deve ser capaz de exportar relatórios em formatos pdf e xls. | Should | 2 | Eficiência |
-| RNF05 | O sistema deve ser capaz de enviar e-mail/mensagem com horário de entrada/saída do aluno. | Should | 1 | Eficiência |
-| RNF06 | Sistema deve enviar notificação caso escolhido pelo responsável caso x minutos de atraso. | Could | 2 | Usabilidade |
+| RNF04 | O sistema deve ser capaz de exportar relatórios em formatos pdf e xls. | Should | 2 | Funcionalidade |
+| RNF05 | O sistema deve ser capaz de enviar e-mail/mensagem com horário de entrada/saída do aluno. | Should | 1 | Funcionalidade |
+| RNF06 | O sistema deve enviar notificação caso escolhido pelo responsável caso x minutos de atraso. | Could | 2 | Funcionalidade |
 
 ### 4.3	Regras de Negócio
 <!--
