@@ -113,10 +113,10 @@ inserir diagramas dos Casos de Uso (UML) e descrever brevemente.
 - - - Para cada aluno da turma;<br>
 - - - - Para cada log de entrada do aluno;<br>
 - - - - - Verificar atraso conforme horário do dia;<br>
--       Caso houver atraso;<br>
--               Verificar notificação habilitada responsável;<br>
--               Selecionar responsável aluno;<br> 
--               Sistema envia mensagem(comunicação escolhida pelo responsável) informando que o dependente está atrasado;<br>
+- - - - Caso houver atraso;<br>
+- - - - - Verificar notificação habilitada responsável;<br>
+- - - - - Selecionar responsável aluno;<br> 
+- - - - - Sistema envia mensagem(comunicação escolhida pelo responsável) informando que o dependente está atrasado;<br>
 ![Alt text](https://github.com/edsonsb96/template/blob/master/UseCase1%20Diagram.png)
 
 ### Caso de Uso - Listar relatório entrada aluno
