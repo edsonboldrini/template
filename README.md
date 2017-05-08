@@ -154,7 +154,13 @@ OBS: repetir as seções abaixo para cada subsistema
 - Todas as outras navegabilidades são justificadas por as classes serem as mais fortes nos relacionamentos.
 
 ##### Projeto da Aplicação
-apresentar diagramas de sequência e mapeamento dos casos de uso para classes
+
+###### Caso de Uso Enviar Notificação
+![Alt text](https://github.com/edsonsb96/template/blob/master/DiagramaSequenciaEnviarNotificacao.png?raw=true "Enviar Notificação")
+
+###### Caso de Uso Relatório Entrada Saida Aluno
+![Alt text](https://github.com/edsonsb96/template/blob/master/DiagramaSequenciaRelatorioEntradaSaidaAluno.png?raw=true "Relatório Entrada Saida Aluno")
+
 #### 2.2.2.  Projeto da Interface com Usuário
 ##### Projeto da Visão
 A apresentação controle de acesso completa pode ser encontrada [aqui](https://github.com/edsonsb96/template/blob/master/Modelo_Tela.pdf). <br>
