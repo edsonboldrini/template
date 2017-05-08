@@ -108,9 +108,9 @@ inserir diagrama dos subsistemas UML<br>
 inserir diagramas dos Casos de Uso (UML) e descrever brevemente.
 
 ### Caso de Uso - Enviar notificação de aluno atrasado <br>
-Selecionar Turmas;<br>
-Para cada turma;<br>
-Para cada aluno da turma;<br>
+- Selecionar Turmas;<br>
+- - Para cada turma;<br>
+- - Para cada aluno da turma;<br>
 Para cada log de entrada do aluno;<br>
 Verificar atraso conforme horário do dia;<br>
 Caso houver atraso;<br>
