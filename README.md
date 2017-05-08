@@ -108,23 +108,23 @@ inserir diagrama dos subsistemas UML<br>
 inserir diagramas dos Casos de Uso (UML) e descrever brevemente.
 
 ### Caso de Uso - Enviar notificação de aluno atrasado <br>
-- Selecionar Turmas;<br>
-- - Para cada turma;<br>
-- - - Para cada aluno da turma;<br>
-- - - - Para cada log de entrada do aluno;<br>
-- - - - - Verificar atraso conforme horário do dia;<br>
-- - - - Caso houver atraso;<br>
-- - - - - Verificar notificação habilitada responsável;<br>
-- - - - - Selecionar responsável aluno;<br> 
-- - - - - Sistema envia mensagem(comunicação escolhida pelo responsável) informando que o dependente está atrasado;<br>
+        *       Selecionar Turmas;
+                *       Para cada turma;
+                        *       Para cada aluno da turma;
+                                *       Para cada log de entrada do aluno;
+                                        *       Verificar atraso conforme horário do dia;
+                                *       Caso houver atraso;
+                                        *       Verificar notificação habilitada responsável;*
+                                        *       Selecionar responsável aluno;
+                                        *       Sistema envia mensagem(comunicação escolhida pelo responsável) informando que o dependente está atrasado;
 ![Alt text](https://github.com/edsonsb96/template/blob/master/UseCase1%20Diagram.png)
 
 ### Caso de Uso - Listar relatório entrada aluno
-*       Selecionar Aluno<br>
-        *       Para cada log de entrada do aluno;<br>
-                *       Verificar atraso conforme horário do dia;<br>
-                *       Realizar cálculo de minutos de atraso;<br>
-                *       Listar usuário horários e devidos atrasos;<br>
+*       Selecionar Aluno
+        *       Para cada log de entrada do aluno;
+                *       Verificar atraso conforme horário do dia;
+                *       Realizar cálculo de minutos de atraso;
+                *       Listar usuário horários e devidos atrasos;
 ![Alt text](https://github.com/edsonsb96/template/blob/master/UseCase2%20Diagram.png)
 
 ### 1.3  Modelagem Estrutural (Modelo Conceitual)
