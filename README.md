@@ -107,6 +107,26 @@ inserir diagrama dos subsistemas UML<br>
 ### 1.2  Modelagem de Casos de uso 
 inserir diagramas dos Casos de Uso (UML) e descrever brevemente.
 
+Caso de Uso - Enviar notificação de aluno atrasado
+Selecionar Turmas;
+Para cada turma;
+Para cada aluno da turma;
+Para cada log de entrada do aluno;
+Verificar atraso conforme horário do dia;
+Caso houver atraso;
+Selecionar responsável aluno;
+Verificar notificação habilitada responsável;
+Sistema envia mensagem(comunicação escolhida pelo responsável) informando que o dependente está atrasado;
+![Alt text](https://github.com/edsonsb96/template/blob/master/UseCase1%20Diagram.png)
+
+Caso de Uso - Listar relatório entrada aluno
+Selecionar Aluno
+Para cada log de entrada do aluno;
+Verificar atraso conforme horário do dia;
+Realizar cálculo de minutos de atraso;
+Listar usuário horários e devidos atrasos;
+![Alt text](https://github.com/edsonsb96/template/blob/master/UseCase2%20Diagram.png)
+
 ### 1.3  Modelagem Estrutural (Modelo Conceitual)
 ** ATENÇO: USAR Notação Entidade-Relacionamentos se estiver fazendo BD2 e o diagrama de classes se estiver fazendo Projeto de Sistemas**
 ![Alt text](https://github.com/discipbd2/topicos-trabalho/blob/master/sample_MC.png?raw=true "Modelo Conceitual")
