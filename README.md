@@ -142,12 +142,12 @@ Inserir principais diagramas comportamentais da análise (principalmente, estado
 ## 2.    Projeto de Sistemas:
 ### 2.1  Projeto Arquitetural 
 #### 2.1.1   Plataforma de Implementação e Tecnologias
-O software foram divididos em alguns subsistemas ‘controle de aluno’, ‘log de acesso’ e  ‘controle acesso responsável’  será desenvolvido utilizando linguagem de programação PHP juntamente com framework laravel com o banco de dados (PostgreSQL) para parte de back-end, o front-end alguns frameworks como Bootstrap, jquery e alguns plugins derivados do jquery, porém no subsistema ‘controle acesso responsável’ a parte mobile será desenvolvida usando framework ionic. A escolha do sistema web no subsistema ‘controle de aluno’ foi requisito descrito pelo solicitante, já o subsistema ‘controle acesso responsável’ como responsáveis precisam de ter acesso a qualquer momento será implementado duas versões uma web e outra mobile. 
+O software foi dividido em alguns subsistemas ‘controle de aluno’, ‘log de acesso’ e ‘controle acesso responsável’. Será desenvolvido utilizando linguagem de programação PHP juntamente com framework laravel com o banco de dados (PostgreSQL) para parte de back-end, o front-end alguns frameworks como Bootstrap, jquery e alguns plugins derivados do jquery, porém no subsistema ‘controle acesso responsável’ a parte mobile será desenvolvida usando framework ionic. A escolha do sistema web no subsistema ‘controle de aluno’ foi requisito descrito pelo solicitante, já o subsistema ‘controle acesso responsável’ como responsáveis precisam de ter acesso a qualquer momento será implementado duas versões uma web e outra mobile. 
 
 #### 2.1.2   Atributos de Qualidade e Táticas
  CATEGORIAS | RNF'S | TÁTICAS | 
 | --- | --- | --- |
-| Facilidade de Operação | RNF03, RNF08| Prover ao usuário a capacidade de entrar com comandos que permitam operar o sistema de modo mais eficiente. Para tal, as interfaces do sistema devem permitir, sempre que possível, a entrada por meio de seleção ou leitura de código de barras ao invés da digitação de campos. | 
+| Facilidade de Operação | RNF03 | Prover ao usuário a capacidade de entrar com comandos que permitam operar o sistema de modo mais eficiente. Para tal, as interfaces do sistema devem permitir, sempre que possível, a entrada por meio de seleção ou leitura de código de barras ao invés da digitação de campos. | 
 
 
 #### 2.1.3   Arquitetura de Software
