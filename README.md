@@ -129,7 +129,7 @@ inserir diagramas dos Casos de Uso (UML) e descrever brevemente.
 
 ### 1.3  Modelagem Estrutural (Modelo Conceitual)
 ** ATENÇO: USAR Notação Entidade-Relacionamentos se estiver fazendo BD2 e o diagrama de classes se estiver fazendo Projeto de Sistemas**
-![Alt text](https://github.com/discipbd2/topicos-trabalho/blob/master/sample_MC.png?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/edsonsb96/Topicos-Trabalho-BD2/blob/master/modelo_conceitual.jpg "Modelo Conceitual")
 ###1.4  Modelagem Comportamental
 Inserir principais diagramas comportamentais da análise (principalmente, estados)
 ###1.5  Dicionário de Dados
