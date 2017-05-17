@@ -1,4 +1,4 @@
-Trabalho contido em https://github.com/edsonsb96/template/wiki
+Trabalho escrito contido em https://github.com/edsonsb96/template/wiki
 <!--
 # TRABALHO INTEGRADO: Título do trabalho
 
