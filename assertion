@@ -1,0 +1,19 @@
+CREATE ASSERTION hora_entrada_invalida CHECK
+(
+	NOT EXISTS
+	(
+		select hora from entrada_aluno where hora  >= '00:00:00:00' and hora <= '06:00:00:00'	
+	)
+)
+
+CREATE ASSERTION aluno_sem_responsavel CHECK
+(
+	NOT EXISTS
+	(
+		select aluno.idaluno from aluno
+			INNER JOIN aluno_responsavel ON aluno.idaluno = aluno_responsavel.idaluno
+			group by aluno.idaluno having count(*) = 0 	
+	)
+)
+
+

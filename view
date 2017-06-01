@@ -1,0 +1,26 @@
+create view view_aluno_turma_matriculado as
+select matricula, aluno.nome as nome_aluno, 
+matricula.matriculado as aluno_matriculado, 
+turma.nome as nome_turma  from matricula 
+inner join turma on matricula.idturma = turma.idturma
+inner join aluno on matricula.idaluno = aluno.idaluno;
+
+select * from view_aluno_turma_matriculado LIMIT 10;
+
+
+create view view_aluno_responsavel_notificacao as
+select aluno.matricula, responsavel.nome as nome_responsavel, receber_notificacao from aluno
+inner join aluno_responsavel ON aluno.idaluno = aluno_responsavel.idaluno
+inner join responsavel ON aluno_responsavel.idresponsavel = responsavel.idresponsavel;
+
+select * from view_aluno_responsavel_notificacao where matricula = '031878090500' LIMIT 10;
+
+create view view_aluno_matriculado as
+select turma.idturma, matricula, aluno.nome AS nome_aluno, codigo from turma
+inner join matricula ON turma.idturma = matricula.idturma
+inner join aluno ON matricula.idaluno = aluno.idaluno
+where matricula.matriculado = 1;
+
+select * from view_aluno_matriculado where idturma = 1 LIMIT 10;
+
+
