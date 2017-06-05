@@ -1,0 +1,24 @@
+CREATE OR REPLACE FUNCTION enviar_notificacao()
+RETURNS VOID AS $$
+
+DECLARE record_turma RECORD;
+DECLARE cursor_turma CURSOR FOR SELECT * FROM turma LIMIT 10;
+
+BEGIN
+
+OPEN  cursor_turma;	
+
+	LOOP 
+		FETCH cursor_turma INTO record_turma;
+		EXIT WHEN NOT FOUND;
+		
+	END LOOP;
+CLOSE cursor_turma;
+		
+END
+
+$$ LANGUAGE plpgsql;
+
+
+SELECT enviar_notificacao();
+
