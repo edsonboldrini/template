@@ -3,124 +3,179 @@
 
 
 
-CREATE TABLE tipo_contato (
-descricao VARCHAR(60),
-idtipo_contato SERIAL PRIMARY KEY
-)
-
 CREATE TABLE aluno (
 codigo VARCHAR(20),
+imagem VARCHAR(200),
 matricula VARCHAR(20),
 nome VARCHAR(100),
 idaluno SERIAL PRIMARY KEY,
 idendereco INTEGER
-)
+);
 
 CREATE TABLE responsavel (
-nome VARCHAR(100),
-receber_notificacao INT,
+nome VARCHAR(200),
+receber_notificacao INTEGER,
 idresponsavel SERIAL PRIMARY KEY,
 idendereco INTEGER
-)
+);
 
-CREATE TABLE entrada_aluno (
-hora VARCHAR(8),
+CREATE TABLE tipo_contato (
+idtipo_contato SERIAL PRIMARY KEY,
+descricao VARCHAR(60)
+);
+
+CREATE TABLE endereco (
+cep VARCHAR(9),
+numero VARCHAR(20),
+endereco VARCHAR(200),
+idendereco SERIAL PRIMARY KEY,
+idbairro INTEGER
+);
+
+CREATE TABLE log_justificativa (
+log_justificativa SERIAL PRIMARY KEY,
+descricao VARCHAR(200),
+idresponsavel INTEGER,
+idlog_aluno INTEGER,
+FOREIGN KEY(idresponsavel) REFERENCES responsavel (idresponsavel)
+);
+
+CREATE TABLE contato (
+principal INTEGER,
+contato VARCHAR(200),
+idcontato SERIAL PRIMARY KEY,
+idtipo_contato INTEGER,
+FOREIGN KEY(idtipo_contato) REFERENCES tipo_contato (idtipo_contato)
+);
+
+CREATE TABLE log_aluno (
 data DATE,
-identrada_aluno SERIAL PRIMARY KEY,
+tipo INTEGER,
+hora VARCHAR(8),
+idlog_aluno SERIAL PRIMARY KEY,
 idaluno INTEGER,
 FOREIGN KEY(idaluno) REFERENCES aluno (idaluno)
-)
+);
 
-CREATE TABLE cidade (
-idcidade SERIAL PRIMARY KEY,
-nome VARCHAR(100)
-)
+CREATE TABLE dia_semana (
+iddia_semana SERIAL PRIMARY KEY,
+nome VARCHAR(40)
+);
 
-CREATE TABLE curso (
-idcurso SERIAL PRIMARY KEY,
-nome VARCHAR(100),
-descricao VARCHAR(200)
-)
+CREATE TABLE disciplina (
+nome VARCHAR(200),
+iddisciplina SERIAL PRIMARY KEY
+);
+
+CREATE TABLE horario (
+hora_inicio VARCHAR(10),
+hora_final VARCHAR(10),
+idhorario SERIAL PRIMARY KEY,
+iddia_semana INTEGER,
+iddisciplina INTEGER,
+idperiodo VARCHAR(10),
+FOREIGN KEY(iddia_semana) REFERENCES dia_semana (iddia_semana),
+FOREIGN KEY(iddisciplina) REFERENCES disciplina (iddisciplina)
+);
+
+CREATE TABLE periodo (
+periodo VARCHAR(10),
+idperiodo SERIAl PRIMARY KEY,
+ano INTEGER,
+idturma INTEGER
+);
 
 CREATE TABLE turma (
 idturma SERIAL PRIMARY KEY,
 nome VARCHAR(100),
-descricao VARCHAR(200),
 idcurso INTEGER,
-FOREIGN KEY(idcurso) REFERENCES curso (idcurso)
-)
+idturno INTEGER
+);
 
-CREATE TABLE horario (
-idhorario SERIAL PRIMARY KEY,
-dia_semana INTEGER,
-idturma INTEGER,
-FOREIGN KEY(idturma) REFERENCES turma (idturma)
-)
+CREATE TABLE curso (
+idcurso SERIAL PRIMARY KEY,
+nome VARCHAR(100)
+);
 
-CREATE TABLE matricula (
-data DATE,
-matriculado INTEGER,
-idmatricula SERIAL PRIMARY KEY,
-idturma INTEGER,
-idaluno INTEGER,
-FOREIGN KEY(idturma) REFERENCES turma (idturma),
-FOREIGN KEY(idaluno) REFERENCES aluno (idaluno)
-)
-
-CREATE TABLE contato (
-contato VARCHAR(200),
-principal INTEGER,
-idcontato SERIAL PRIMARY KEY,
-idtipo_contato INTEGER,
-idresponsavel INTEGER,
-FOREIGN KEY(idtipo_contato) REFERENCES tipo_contato (idtipo_contato),
-FOREIGN KEY(idresponsavel) REFERENCES responsavel (idresponsavel)
-)
+CREATE TABLE turno (
+idturno SERIAL PRIMARY KEY,
+nome VARCHAR(30)
+);
 
 CREATE TABLE data_evento (
 data DATE,
 iddata_evento SERIAL PRIMARY KEY,
 idevento INTEGER
-)
-
-CREATE TABLE entrada_saida (
-horario_saida VARCHAR(6),
-horario_entrada VARCHAR(6),
-identrada_saida INTEGER PRIMARY KEY,
-idhorario INTEGER,
-iddata_evento INTEGER,
-FOREIGN KEY(idhorario) REFERENCES horario (idhorario),
-FOREIGN KEY(iddata_evento) REFERENCES data_evento (iddata_evento)
-)
+);
 
 CREATE TABLE evento (
 idevento SERIAL PRIMARY KEY,
 nome VARCHAR(100)
-)
+);
+
+CREATE TABLE entrada_saida (
+horario_saida VARCHAR(8),
+horario_entrada VARCHAR(8),
+identrada_saida SERIAL PRIMARY KEY,
+iddata_evento INTEGER,
+FOREIGN KEY(iddata_evento) REFERENCES data_evento (iddata_evento)
+);
 
 CREATE TABLE bairro (
-idbairro INTEGER PRIMARY KEY,
-nome VARCHAR(100)
-)
+idbairro SERIAL PRIMARY KEY,
+nome VARCHAR(100),
+idcidade INTEGER
+);
 
-CREATE TABLE endereco (
-endereco VARCHAR(200),
-cep VARCHAR(9),
-numero VARCHAR(20),
-idendereco SERIAL PRIMARY KEY,
-idbairro INTEGER,
-idcidade INTEGER,
-FOREIGN KEY(idbairro) REFERENCES bairro (idbairro),
-FOREIGN KEY(idcidade) REFERENCES cidade (idcidade)
-)
+CREATE TABLE cidade (
+nome VARCHAR(100),
+idcidade SERIAL PRIMARY KEY
+);
+
+CREATE TABLE responsavel_contato (
+idresponsavel INTEGER,
+idcontato INTEGER,
+FOREIGN KEY(idresponsavel) REFERENCES responsavel (idresponsavel),
+FOREIGN KEY(idcontato) REFERENCES contato (idcontato)
+);
+
+CREATE TABLE aluno_matriculado (
+idhorario INTEGER,
+idaluno INTEGER,
+data DATE,
+matriculado INTEGER,
+FOREIGN KEY(idhorario) REFERENCES horario (idhorario),
+FOREIGN KEY(idaluno) REFERENCES aluno (idaluno)
+);
+
+CREATE TABLE aluno_contato (
+idcontato INTEGER,
+idaluno INTEGER,
+FOREIGN KEY(idcontato) REFERENCES contato (idcontato),
+FOREIGN KEY(idaluno) REFERENCES aluno (idaluno)
+);
+
+CREATE TABLE aluno_evento (
+idevento INTEGER,
+idaluno INTEGER,
+FOREIGN KEY(idevento) REFERENCES evento (idevento),
+FOREIGN KEY(idaluno) REFERENCES aluno (idaluno)
+);
 
 CREATE TABLE aluno_responsavel (
 idaluno INTEGER,
 idresponsavel INTEGER,
 FOREIGN KEY(idaluno) REFERENCES aluno (idaluno),
 FOREIGN KEY(idresponsavel) REFERENCES responsavel (idresponsavel)
-)
+);
 
-ALTER TABLE aluno ADD FOREIGN KEY(idendereco) REFERENCES endereco (idendereco)
-ALTER TABLE responsavel ADD FOREIGN KEY(idendereco) REFERENCES endereco (idendereco)
-ALTER TABLE data_evento ADD FOREIGN KEY(idevento) REFERENCES evento (idevento)
+ALTER TABLE aluno ADD FOREIGN KEY(idendereco) REFERENCES endereco (idendereco);
+ALTER TABLE responsavel ADD FOREIGN KEY(idendereco) REFERENCES endereco (idendereco);
+ALTER TABLE endereco ADD FOREIGN KEY(idbairro) REFERENCES bairro (idbairro);
+ALTER TABLE log_justificativa ADD FOREIGN KEY(idlog_aluno) REFERENCES log_aluno (idlog_aluno);
+ALTER TABLE horario ADD FOREIGN KEY(idperiodo) REFERENCES periodo (idperiodo);
+ALTER TABLE periodo ADD FOREIGN KEY(idturma) REFERENCES turma (idturma);
+ALTER TABLE turma ADD FOREIGN KEY(idcurso) REFERENCES curso (idcurso);
+ALTER TABLE turma ADD FOREIGN KEY(idturno) REFERENCES turno (idturno);
+ALTER TABLE data_evento ADD FOREIGN KEY(idevento) REFERENCES evento (idevento);
+ALTER TABLE bairro ADD FOREIGN KEY(idcidade) REFERENCES cidade (idcidade);
