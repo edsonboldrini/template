@@ -73,7 +73,7 @@ hora_final VARCHAR(10),
 idhorario SERIAL PRIMARY KEY,
 iddia_semana INTEGER,
 iddisciplina INTEGER,
-idperiodo SERIAL,
+idperiodo INTEGER,
 FOREIGN KEY(iddia_semana) REFERENCES dia_semana (iddia_semana),
 FOREIGN KEY(iddisciplina) REFERENCES disciplina (iddisciplina)
 );
