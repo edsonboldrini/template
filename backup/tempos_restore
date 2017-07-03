@@ -1,0 +1,8 @@
+tempo - restore directory: 	real	0m9.100s
+				user	0m0.792s
+				sys	0m0.036s
+				
+tempo - restore .tar: 		real	0m10.535s
+				user	0m0.472s
+				sys	0m0.068s
+
