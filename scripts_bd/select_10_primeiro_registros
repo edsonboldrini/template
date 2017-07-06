@@ -1,0 +1,27 @@
+select 'SELECT * FROM '||tablename||' LIMIT 10;' AS select_limit  from pg_tables WHERE schemaname = 'public'
+
+SELECT * FROM responsavel LIMIT 10;
+SELECT * FROM periodo LIMIT 10;
+SELECT * FROM aluno_matriculado LIMIT 10;
+SELECT * FROM tipo_contato LIMIT 10;
+SELECT * FROM dia_semana LIMIT 10;
+SELECT * FROM disciplina LIMIT 10;
+SELECT * FROM entrada_saida LIMIT 10;
+SELECT * FROM responsavel_contato LIMIT 10;
+SELECT * FROM contato LIMIT 10;
+SELECT * FROM aluno LIMIT 10;
+SELECT * FROM aluno_contato LIMIT 10;
+SELECT * FROM aluno_evento LIMIT 10;
+SELECT * FROM aluno_responsavel LIMIT 10;
+SELECT * FROM endereco LIMIT 10;
+SELECT * FROM log_aluno LIMIT 10;
+SELECT * FROM log_justificativa LIMIT 10;
+SELECT * FROM turma LIMIT 10;
+SELECT * FROM curso LIMIT 10;
+SELECT * FROM turno LIMIT 10;
+SELECT * FROM horario LIMIT 10;
+SELECT * FROM evento LIMIT 10;
+SELECT * FROM data_evento LIMIT 10;
+SELECT * FROM cidade LIMIT 10;
+SELECT * FROM bairro LIMIT 10;
+

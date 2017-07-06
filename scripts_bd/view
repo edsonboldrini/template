@@ -1,0 +1,29 @@
+create view view_aluno_disciplina_matriculado as
+select matricula, aluno.nome as nome_aluno, 
+disciplina.nome as nome_disciplina from aluno
+inner join aluno_matriculado on aluno.idaluno = aluno_matriculado.idaluno
+inner join horario on aluno_matriculado.idhorario = horario.idhorario
+inner join disciplina on horario.iddisciplina = disciplina.iddisciplina
+where aluno_matriculado.matriculado = 1
+
+select * from view_aluno_disciplina_matriculado LIMIT 10
+
+create view view_aluno_responsavel_notificacao as
+select aluno.matricula, responsavel.nome as nome_responsavel, receber_notificacao from aluno
+inner join aluno_responsavel ON aluno.idaluno = aluno_responsavel.idaluno
+inner join responsavel ON aluno_responsavel.idresponsavel = responsavel.idresponsavel;
+
+select * from view_aluno_responsavel_notificacao where matricula = '031878090500' LIMIT 10;
+
+create view view_turma_disciplina as
+select turma.nome AS nome_turma, disciplina.nome AS nome_disciplina
+,dia_semana.nome AS nome_dia_semana
+from turma
+inner join periodo ON turma.idturma = periodo.idturma
+inner join horario ON periodo.idperiodo = horario.idperiodo
+inner join disciplina ON horario.iddisciplina = disciplina.iddisciplina
+inner join dia_semana ON horario.iddia_semana = dia_semana.iddia_semana
+
+select * from view_turma_disciplina LIMIT 10;
+
+

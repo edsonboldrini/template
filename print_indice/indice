@@ -1,0 +1,40 @@
+CREATE INDEX idx_data ON log_aluno USING BTREE (data);
+CREATE INDEX log_aluno_idaluno_idx ON log_aluno USING btree (idaluno);
+
+select * from aluno
+inner join log_aluno on aluno.idaluno = log_aluno.idaluno 
+WHERE data between '2017-05-01' AND '2017-07-07';
+
+
+CREATE INDEX idx_iddisciplina ON horario USING BTREE (iddisciplina);
+CREATE INDEX idx_iddia_semana ON horario USING BTREE (iddia_semana);
+CREATE INDEX idx_idperiodo ON horario USING BTREE (idperiodo);
+
+select disciplina.nome AS nome_disciplina, dia_semana.nome AS dia_semana, 
+	hora_inicio, hora_final
+from horario
+inner join periodo ON horario.idperiodo = periodo.idperiodo
+inner join disciplina ON horario.iddisciplina = disciplina.iddisciplina
+inner join dia_semana ON horario.iddia_semana = dia_semana.iddia_semana
+
+
+select disciplina.nome AS nome_disciplina, dia_semana.nome AS dia_semana, 
+	hora_inicio, hora_final
+from horario
+inner join periodo ON horario.idperiodo = periodo.idperiodo
+inner join disciplina ON horario.iddisciplina = disciplina.iddisciplina
+inner join dia_semana ON horario.iddia_semana = dia_semana.iddia_semana
+where horario.idperiodo = 1
+AND horario.iddia_semana = 2
+
+
+CREATE INDEX idx_idperiodo_iddia_semana ON horario USING BTREE (idperiodo, iddia_semana);
+
+select disciplina.nome AS nome_disciplina, dia_semana.nome AS dia_semana, 
+	hora_inicio, hora_final
+from horario
+inner join periodo ON horario.idperiodo = periodo.idperiodo
+inner join disciplina ON horario.iddisciplina = disciplina.iddisciplina
+inner join dia_semana ON horario.iddia_semana = dia_semana.iddia_semana
+where horario.idperiodo = 1
+AND horario.iddia_semana = 2

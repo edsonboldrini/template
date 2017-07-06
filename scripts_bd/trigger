@@ -1,0 +1,40 @@
+
+CREATE FUNCTION verifica_aluno_responsavel_receber_notificacao() RETURNS TRIGGER AS 
+$$
+BEGIN
+
+IF EXISTS (select idaluno, sum(receber_notificacao) from responsavel
+INNER JOIN aluno_responsavel ON responsavel.idresponsavel = aluno_responsavel.idresponsavel
+group by idaluno having sum(receber_notificacao) = 0
+
+) THEN
+RAISE EXCEPTION 'Erro: aluno precisa ter pelo menos um responsavel para receber notificação!';
+END IF;
+RETURN NULL;
+
+END
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER checkAlunoResponsavelReceberNotificacaoTrigger
+AFTER INSERT OR UPDATE ON responsavel
+FOR EACH ROW
+EXECUTE PROCEDURE verifica_aluno_responsavel_receber_notificacao();
+
+
+CREATE OR REPLACE FUNCTION trigger_verifica_conflito_horario() RETURNS TRIGGER AS 
+$$
+BEGIN
+
+IF (SELECT verifica_conflito_horario(NEW.iddia_semana, NEW.idperiodo, NEW.hora_inicio, NEW.hora_final, NEW.idhorario)) THEN
+	RAISE EXCEPTION 'Erro: conflito de horario com periodo/dia da semana!';
+END IF;
+RETURN NULL;
+
+END
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER checkConflitoHorarioTrigger
+AFTER INSERT OR UPDATE ON horario
+FOR EACH ROW
+EXECUTE PROCEDURE trigger_verifica_conflito_horario();
+

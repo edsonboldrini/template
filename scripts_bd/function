@@ -1,0 +1,113 @@
+CREATE OR REPLACE FUNCTION verifica_conflito_horario(dia_semana_id INTEGER, periodo_id INTEGER, horai VARCHAR(10), horaf VARCHAR(10))
+RETURNS BOOLEAN AS $$
+
+DECLARE contador INTEGER;
+
+BEGIN
+	SELECT COUNT(*) INTO contador FROM horario WHERE horario.iddia_semana = dia_semana_id 
+	AND horario.idperiodo = periodo_id AND hora_inicio < horaf;
+	
+	IF contador = 0 THEN
+		RETURN FALSE;
+	END IF;
+
+	SELECT COUNT(*) INTO contador FROM horario WHERE horario.iddia_semana = dia_semana_id 
+	AND horario.idperiodo = periodo_id AND hora_final > horai;
+	
+	IF contador = 0 THEN
+		RETURN FALSE;
+	END IF;
+
+	SELECT COUNT(*) INTO contador FROM horario WHERE horario.iddia_semana = dia_semana_id 
+	AND horario.idperiodo = periodo_id AND (hora_final > horai and hora_inicio < horaf ) ;
+
+	IF contador = 0 THEN
+		RETURN FALSE;
+	END IF;
+
+	RETURN TRUE;
+END;
+$$ LANGUAGE plpgsql;
+
+
+CREATE OR REPLACE FUNCTION relatorio_entrada_saida(id_aluno INT, data_inicio date, data_fim date, id_periodo INT)
+RETURNS TABLE 
+	   ( 
+	     data DATE,
+	     hora1 varchar(10),
+	     hora2 varchar(10),
+	     hora3 varchar(10),
+	     tipo int 
+	  ) AS $$
+
+DECLARE record_log_aluno RECORD;
+DECLARE diff time;
+
+DECLARE hora_entrada_log time;
+DECLARE hora_saida_log time;
+DECLARE hora_entrada_horario time;
+DECLARE hora_saida_horario time;
+
+BEGIN
+	CREATE TEMPORARY TABLE table_result
+	   ( 
+	     data DATE,
+	     hora1 varchar(10),
+	     hora2 varchar(10),
+	     hora3 varchar(10),
+	     tipo int 
+	  );
+	
+	<<Loop1>>
+	FOR record_log_aluno IN
+		select log_aluno.data AS data_log from log_aluno WHERE idaluno = id_aluno
+			AND log_aluno.data between data_inicio AND data_fim
+			GROUP BY log_aluno.data
+	LOOP	
+
+		SELECT hora INTO hora_entrada_log from log_aluno WHERE log_aluno.idaluno = id_aluno
+			AND log_aluno.data = record_log_aluno.data_log and log_aluno.tipo=0
+			order by log_aluno.hora ASC
+			LIMIT 1;
+
+		SELECT hora INTO hora_saida_log from log_aluno WHERE log_aluno.idaluno = id_aluno 
+			AND log_aluno.data = record_log_aluno.data_log and log_aluno.tipo=1
+			order by log_aluno.hora DESC 
+			LIMIT 1;
+
+		SELECT hora_inicio INTO hora_entrada_horario from aluno_matriculado 
+			inner join horario on aluno_matriculado.idhorario = horario.idhorario
+			WHERE idaluno = id_aluno AND idperiodo = id_periodo
+			AND iddia_semana = extract(DOW FROM record_log_aluno.data_log)
+			ORDER BY hora_inicio
+			LIMIT 1;
+
+		SELECT hora_final INTO hora_saida_horario from aluno_matriculado 
+			inner join horario on aluno_matriculado.idhorario = horario.idhorario
+			WHERE idaluno = id_aluno AND idperiodo = id_periodo
+			AND iddia_semana = extract(DOW FROM record_log_aluno.data_log)
+			ORDER BY hora_inicio DESC
+			LIMIT 1;
+
+
+		IF (hora_entrada_log > hora_entrada_horario) THEN
+			diff := hora_entrada_log - hora_entrada_horario;
+			INSERT INTO table_result (data, hora1, hora2, hora3, tipo) VALUES (record_log_aluno.data_log, hora_entrada_log, hora_entrada_horario, diff, '0');
+		END IF;
+
+		IF (hora_saida_log < hora_saida_horario) THEN
+			diff := hora_saida_horario - hora_saida_log;
+			INSERT INTO table_result (data, hora1, hora2, hora3, tipo) VALUES (record_log_aluno.data_log, hora_saida_horario, hora_saida_log, diff, '1');
+		END IF;
+		
+			
+	END LOOP Loop1;
+
+	RETURN QUERY SELECT * FROM table_result;
+	DROP TABLE table_result;			
+END
+
+$$ LANGUAGE plpgsql;
+
+SELECT * FROM relatorio_entrada_saida(1 , '2017-07-03', '2017-07-03', 120);
+
