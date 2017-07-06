@@ -1,0 +1,22 @@
+ INSERT INTO evento(nome) VALUES 
+ ('Evento zKggqiqSQx') ,
+ ('Evento FnTCacrWTh') ,
+ ('Evento TwEBFsCioK') ,
+ ('Evento bxvBdJMmrz') ,
+ ('Evento voGpSGztib') ,
+ ('Evento JwWKVXlpDL') ,
+ ('Evento WBqmwWVBlc') ,
+ ('Evento ysWiQnCMId') ,
+ ('Evento eMANBBMtyn') ,
+ ('Evento AnhoLbfrEc') ,
+ ('Evento GtNXhKdhTr') ,
+ ('Evento ZaXMZibvCS') ,
+ ('Evento chDQJuZGhn') ,
+ ('Evento ecRmdgvjnG') ,
+ ('Evento ROoDNaoaQz') ,
+ ('Evento MgQQKfDvMO') ,
+ ('Evento SqAPZWDbsi') ,
+ ('Evento NQsXqosmoO') ,
+ ('Evento iBlzPefDrE') ,
+ ('Evento CbZvNInAWd') 
+;
